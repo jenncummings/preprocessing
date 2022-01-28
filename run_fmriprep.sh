@@ -19,4 +19,4 @@ subj=$1
     --use-aroma \
     --output-spaces MNI152NLin2009cAsym \
     --write-graph --work-dir /scratch \
-    /project/data/testbids /project/data/testbids/derivatives participant
+    /project/data/bids /project/data/bids/derivatives participant
