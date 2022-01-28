@@ -5,7 +5,7 @@ project_dir=/working/mochila2/JC
 
 data_dir=/data/mochila1/PatientStudy/UCSF
 
-bids_dir=$project_dir/bids
+bids_dir=$project_dir/data/bids
 
 scripts_dir=$project_dir/code/preprocessing #directory with my preprocessing scripts, including this one
 
