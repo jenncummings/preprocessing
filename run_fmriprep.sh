@@ -16,7 +16,7 @@ subj=$1
     --omp-nthreads $SLURM_CPUS_PER_TASK \
     --n_cpus $SLURM_CPUS_PER_TASK \
     --use-aroma \
-    --return-all-components
+    --return-all-components \
     --output-spaces MNI152NLin2009cAsym \
     --write-graph --work-dir /scratch \
     /project/data/bids /project/data/bids/derivatives participant
