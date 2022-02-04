@@ -6,7 +6,6 @@
 #SBATCH --mail-type=BEGIN,END,FAIL
 #SBATCH --mail-user=jenncummings@ucsf.edu
 #SBATCH --output=/working/mochila2/JC/code/preprocessing/logs/mriqc-%A_%a.log
-#SBATCH --partition=all
 
 # How long is job?
 #SBATCH -t 3:00:00
