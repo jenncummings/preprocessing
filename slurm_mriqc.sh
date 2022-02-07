@@ -3,6 +3,7 @@
 # Run from BIDS code/preprocessing directory: sbatch slurm_mriqc.sh <subject id>
 
 #SBATCH --job-name=mriqc
+#SBATCH --nodelist=hyperion,cronus,titan
 #SBATCH --mail-type=BEGIN,END,FAIL
 #SBATCH --mail-user=jenncummings@ucsf.edu
 #SBATCH --output=/working/mochila2/JC/code/preprocessing/logs/mriqc-%A_%a.log
