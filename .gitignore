@@ -2,3 +2,4 @@
 **/logs
 *.log
 license.txt
+*.csv
