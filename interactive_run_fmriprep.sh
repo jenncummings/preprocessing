@@ -10,13 +10,14 @@ subj=$1
 singularity run --cleanenv \
     --bind $project_dir:/project \
     --bind $work_dir:/scratch \
-    /working/mochila2/JC/containers/fmriprep-v21.0.1.simg \
+    /data/i2/software/singularity/fmriprep-latest.simg \
     --verbose \
     --participant-label $subj \
     --fs-license-file /project/code/preprocessing/license.txt \
     --fs-no-reconall \
-    --omp-nthreads $SLURM_CPUS_PER_TASK \
-    --n_cpus $SLURM_CPUS_PER_TASK \
+    --omp-nthreads 8 \
+    --nthreads 12 \
+    --mem_mb 30000 \
     --use-aroma \
     --return-all-components \
     --output-spaces MNI152NLin2009cAsym \

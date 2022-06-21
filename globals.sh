@@ -1,12 +1,14 @@
-#! /bin/bash
+#!/bin/bash
 
 # Edit where your project directory is
-project_dir=/working/mochila2/JC
+export project_dir=/working/mochila2/JC
 
-data_dir=/data/mochila1/PatientStudy/UCSF
+export data_dir=/data/mochila1/PatientStudy/UCSF
 
-bids_dir=$project_dir/data/bids
+export bids_dir=$project_dir/data/455_bids
 
-scripts_dir=$project_dir/code/preprocessing #directory with my preprocessing scripts, including this one
+export scripts_dir=$project_dir/code/preprocessing #directory with my preprocessing scripts, including this one
 
-scratch_dir=/scratch/$USERNAME
+export scratch_dir=/scratch/$USERNAME
+
+export work_dir=/working/mochila2/JC/work
