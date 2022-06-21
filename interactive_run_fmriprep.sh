@@ -16,6 +16,7 @@ singularity run --cleanenv \
     --fs-license-file /project/code/preprocessing/license.txt \
     --fs-no-reconall \
     --nthreads $SLURM_CPUS_PER_TASK \
+    --mem_mb $SLURM_MEM \
     --use-aroma \
     --return-all-components \
     --resource-monitor \
