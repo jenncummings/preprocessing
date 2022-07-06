@@ -1,0 +1,74 @@
+[environment]
+cpu_count = 72
+exec_env = "singularity"
+free_mem = 330.4
+overcommit_policy = "heuristic"
+overcommit_limit = "50%"
+nipype_version = "1.6.1"
+templateflow_version = "0.7.1"
+version = "20.2.3"
+
+[execution]
+bids_dir = "/project/data/new_testbids"
+bids_database_dir = "/working/mochila2/JC/code/preprocessing/work/20220706-115555_a1ab2896-2811-455b-94ca-4a52f85f9673/bids_db"
+boilerplate_only = false
+sloppy = false
+debug = [ "compcor",]
+fmriprep_dir = "/project/data/new_testbids/derivatives/fmriprep"
+fs_subjects_dir = "/project/data/new_testbids/derivatives/freesurfer"
+layout = "BIDS Layout: .../project/data/new_testbids | Subjects: 1 | Sessions: 1 | Runs: 2"
+log_dir = "/project/data/new_testbids/derivatives/fmriprep/logs"
+log_level = 20
+low_mem = false
+md_only_boilerplate = false
+notrack = false
+output_dir = "/project/data/new_testbids/derivatives"
+output_layout = "legacy"
+output_spaces = "MNI152NLin2009cAsym:res-native"
+reports_only = false
+run_uuid = "20220706-115555_a1ab2896-2811-455b-94ca-4a52f85f9673"
+participant_label = [ "0106003",]
+templateflow_home = "/home/jcummings1/.cache/templateflow"
+work_dir = "/working/mochila2/JC/code/preprocessing/work"
+write_graph = false
+
+[workflow]
+anat_only = false
+aroma_err_on_warn = false
+aroma_melodic_dim = -200
+bold2t1w_dof = 6
+bold2t1w_init = "register"
+cifti_output = false
+fmap_bspline = false
+force_syn = false
+hires = true
+ignore = []
+longitudinal = false
+medial_surface_nan = false
+regressors_all_comps = false
+regressors_dvars_th = 1.5
+regressors_fd_th = 0.5
+run_reconall = true
+skull_strip_fixed_seed = false
+skull_strip_template = "OASIS30ANTs"
+skull_strip_t1w = "force"
+use_aroma = false
+use_syn_sdc = false
+
+[nipype]
+crashfile_format = "txt"
+get_linked_libs = false
+nprocs = 72
+omp_nthreads = 8
+plugin = "MultiProc"
+resource_monitor = false
+stop_on_first_crash = false
+
+[seeds]
+master = 5669
+ants = 2571
+numpy = 12738
+
+[nipype.plugin_args]
+maxtasksperchild = 1
+raise_insufficient = false
