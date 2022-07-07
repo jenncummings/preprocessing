@@ -17,6 +17,8 @@ singularity run -e -B $project_dir:/project,$work_dir:/scratch /data/i2/software
     --fs-no-reconall \
     --omp-nthreads $SLURM_CPUS_PER_TASK \
     --n_cpus $SLURM_CPUS_PER_TASK \
+    --mem $SLURM_MEM_PER_NODE \
+    --low-mem \
     --use-aroma \
     --return-all-components \
     --resource-monitor \
