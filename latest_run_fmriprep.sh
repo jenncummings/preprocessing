@@ -17,9 +17,10 @@ singularity run -e -B $project_dir:/project,$work_dir:/scratch /working/mochila2
     --debug all \
     --fs-no-reconall \
     --omp-nthreads $SLURM_CPUS_PER_TASK \
-    --n_cpus $SLURM_CPUS_PER_TASK \
-    --mem $SLURM_MEM_PER_NODE \
+    --nprocs $SLURM_CPUS_PER_TASK \
+    --mem_mb $SLURM_MEM_PER_CPU \
     --low-mem \
+    --force-syn \
     --use-aroma \
     --return-all-components \
     --resource-monitor \
