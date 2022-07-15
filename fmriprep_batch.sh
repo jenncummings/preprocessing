@@ -31,7 +31,6 @@ singularity run -e -B $bids_dir:/BIDS,$work_dir:/work /working/mochila2/JC/conta
     --participant-label $subj \
     --ignore fieldmaps \
     --bold2t1w-dof 9 \
-    --fs-no-reconall \
     --use-aroma \
     --debug all \
     --resource-monitor \
@@ -39,4 +38,4 @@ singularity run -e -B $bids_dir:/BIDS,$work_dir:/work /working/mochila2/JC/conta
     --output-spaces MNI152NLin2009cAsym \
     -w /work \
 
-echo "Completed fmriprep script for BrainChange sub-bc${1}."
+echo "Completed fmriprep script for BACPAC sub-${1}."
