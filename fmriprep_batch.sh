@@ -3,7 +3,9 @@
 #SBATCH --job-name=nosdc_fmriprep_v21.0.2
 #SBATCH --mail-type=START,END,FAIL
 #SBATCH --mail-user=jenncummings@ucsf.edu
-#SBATCH --cpus-per-task=1
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=8
 #SBATCH --mem=30G
 #SBATCH --time=48:00:00
 #SBATCH --output=/working/mochila2/JC/code/preprocessing/logs/%x-%j.log
@@ -27,7 +29,7 @@ singularity run -e -B $bids_dir:/BIDS,$work_dir:/work /working/mochila2/JC/conta
     /BIDS /BIDS/derivatives \
     participant \
     --omp-nthreads $SLURM_CPUS_PER_TASK \
-    --nprocs $SLURM_CPUS_PER_TASK \
+    --n_cpus $SLURM_CPUS_PER_TASK \
     --participant-label $subj \
     --ignore fieldmaps \
     --bold2t1w-dof 9 \
