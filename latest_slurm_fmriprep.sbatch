@@ -6,7 +6,7 @@
 #SBATCH --mail-type=END,FAIL
 #SBATCH --mail-user=jenncummings@ucsf.edu
 #SBATCH --cpus-per-task=1
-#SBATCH --mem-per-cpu=16384M
+#SBATCH --mem-per-cpu=30000M
 #SBATCH --time=24:00:00
 #SBATCH --output=/working/mochila2/JC/code/preprocessing/logs/%x-%j.log
 

@@ -5,11 +5,9 @@
 #SBATCH --job-name=fmriprep
 #SBATCH --mail-type=END,FAIL
 #SBATCH --mail-user=jenncummings@ucsf.edu
-#SBATCH --nodes=1
-#SBATCH --ntasks=1
-#SBATCH --cpus-per-task=8
-#SBATCH --mem=24000
-#SBATCH --time=20:00:00
+#SBATCH --cpus-per-task=1
+#SBATCH --mem-per-cpu=30000M
+#SBATCH --time=24:00:00
 #SBATCH --output=/working/mochila2/JC/code/preprocessing/logs/%x-%j.log
 
 pwd; hostname; date
