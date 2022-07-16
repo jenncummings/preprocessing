@@ -6,7 +6,7 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=8
-#SBATCH --mem=30G
+#SBATCH --mem=60G
 #SBATCH --time=48:00:00
 #SBATCH --output=/working/mochila2/JC/code/preprocessing/logs/%x-%j.log
 
@@ -17,10 +17,9 @@ echo "Running fmriprep script for BACPAC sub-${1}."
 #User inputs:
 project_dir=/working/mochila2/JC
 bids_dir=$project_dir/data/bids
-work_dir=$project_dir/work
+work_dir=$project_dir/work_2
 
 #Begin:
-
 subj=${1}
 
 #Run fmriprep
