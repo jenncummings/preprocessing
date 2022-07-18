@@ -10,6 +10,6 @@ do
     #echo "subject : $subject"
     #echo "session : $session"
     #sh job_test.sh $dir $subject $session
-    sbatch fmriprep_batch.sh $subject
+    sbatch -J fmriprep-$subject fmriprep_batch.sh $subject
 done < $INPUT
 IFS=$OLDIFS
